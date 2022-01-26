@@ -4,12 +4,10 @@
 	  window.open("http://www.google.es", "google");
 	}
   </script>
+ <script src="https://kit.fontawesome.com/0a820d8efc.js" crossorigin="anonymous"></script>
   <style>
 .btn-flotante {
     border-radius: 200px; /* Borde del boton */
-    background-image: url("./icon/question.svg"); /* Color de fondo */
-    background-repeat: no-repeat;
-    background-position: center;
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -20,13 +18,37 @@
     width: 60px;
     height: 60px;
     background-color: #007b99;
+    display: flex;
+    align-items: center;
 }
+
+.btn-flotante .iconoUno {
+  color: white;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+.btn-flotante .iconoDos {
+  display: none;
+}
+
+.btn-flotante:hover > .iconoUno{
+  display: none;
+}
+
+.btn-flotante:hover > .iconoDos{
+  display: block;
+  color: #007b99;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
 .btn-flotante:hover {
-	background-image: url("./icon/soporte.svg"); /* Color de fondo al pasar el cursor */
   background-color: white;
 	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
 	transform: scale(1.1);
 }
+
 @media only screen and (max-width: 600px) {
  	.btn-flotante {
 		padding: 12px 20px;
@@ -35,4 +57,7 @@
 	}
 }
 </style>
-  <div class="btn-flotante" onclick="open_win()"></div>
+  <div class="btn-flotante" onclick="open_win()">
+    <span class="iconoUno"><i class="far fa-comments"></i></span>
+    <span class="iconoDos"><i class="fas fa-laptop-house"></i></span>
+  </div>
