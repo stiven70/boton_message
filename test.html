@@ -1,0 +1,38 @@
+<script language="javascript">
+	function open_win()
+	{
+	  window.open("http://www.google.es", "google");
+	}
+  </script>
+  <style>
+.btn-flotante {
+    border-radius: 200px; /* Borde del boton */
+    background-image: url("./icon/question.svg"); /* Color de fondo */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: transform 0.5s, filter .9s ease-out;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #007b99;
+}
+.btn-flotante:hover {
+	background-image: url("./icon/soporte.svg"); /* Color de fondo al pasar el cursor */
+  background-color: white;
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1);
+}
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+</style>
+  <div class="btn-flotante" onclick="open_win()"></div>
